@@ -13,8 +13,13 @@ struct Offer: View {
     
     var body: some View {
         VStack {
-            Text(title).padding().font(.title)
-            Text(description).padding()
+            Text(title)
+                .padding()
+                .font(.title)
+                .background(Color("CardBackground"))
+            Text(description)
+                .padding()
+                .background(Color("CardBackground"))
         }
     }
 }
