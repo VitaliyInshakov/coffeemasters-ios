@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Category: Decodable {
+struct Category: Decodable, Identifiable {
+    var id: String { name }
     var name: String
     var products: [Product] = []
 }

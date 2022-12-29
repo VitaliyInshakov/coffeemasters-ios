@@ -22,7 +22,7 @@ struct OrdersPage: View {
                 List {
                     Section("ITEMS") {
                         ForEach(cartManager.cart, id:\.0.id) { item in
-                            OrderItem()
+                            OrderItem(item: item)
                         }
                     }.listRowBackground(Color("Background"))
                                         
@@ -43,8 +43,8 @@ struct OrdersPage: View {
                             Spacer()
                             Text("Total")
                             Spacer()
-//                            Text("$ \(cartManager.total(), specifier: "%.2f")")
-//                                .bold()
+                            Text("$ \(cartManager.total(), specifier: "%.2f")")
+                                .bold()
                             Spacer()
                         }
                     }.listRowBackground(Color.clear)
